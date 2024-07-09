@@ -268,14 +268,7 @@ public class UserPayment extends javax.swing.JFrame {
         selectedBank = "Public Bank";
     } else if (jRadioButton4.isSelected()) {
         selectedBank = "HongLeongBank";
-    }
-    
-    // Create an instance of userReceipt and pass the data
-    userReceipt form = new userReceipt(totalPrice, selectedBank);
-    form.setVisible(true);
-    this.setVisible(false);
-
-    }                                        
+    }                                  
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
