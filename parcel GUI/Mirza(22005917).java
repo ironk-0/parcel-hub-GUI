@@ -128,6 +128,7 @@ public class UserHomepage extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 204, 255));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Homepage");
 
         jLabel2.setPreferredSize(new java.awt.Dimension(16, 38));
