@@ -42,17 +42,13 @@ public class UserHomepage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yusuf\\Pictures\\apache image\\2.1.png")); // NOI18N
+       
         jLabel3.setPreferredSize(new java.awt.Dimension(16, 38));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yusuf\\Pictures\\apache image\\2.2.png")); // NOI18N
         jLabel4.setPreferredSize(new java.awt.Dimension(16, 38));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yusuf\\Pictures\\apache image\\2.3.png")); // NOI18N
+        
         jLabel5.setPreferredSize(new java.awt.Dimension(16, 38));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yusuf\\Pictures\\apache image\\2.4.png")); // NOI18N
         jLabel7.setPreferredSize(new java.awt.Dimension(16, 38));
 
         jButton1.setBackground(new java.awt.Color(51, 204, 255));
@@ -134,7 +130,6 @@ public class UserHomepage extends javax.swing.JFrame {
 
         jLabel1.setText("Homepage");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yusuf\\Downloads\\1.jpg")); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(16, 38));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -204,44 +199,6 @@ public class UserHomepage extends javax.swing.JFrame {
       
     }                                        
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UserHomepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UserHomepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UserHomepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserHomepage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UserHomepage().setVisible(true);
-            }
-        });
-    }
-
-    void setvisible(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     // Variables declaration - do not modify                     
     private javax.swing.JButton jButton1;
