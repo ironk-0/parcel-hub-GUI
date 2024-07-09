@@ -1,9 +1,4 @@
 package javaapplication1;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -242,18 +237,7 @@ public class UserRgisterParcel extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
      String trackingNumber = jTextField1.getText(); // Get the tracking number from the text field
-    String selectedSize = (String) jComboBox1.getSelectedItem(); // Get the selected size from the combo box
-
-    // Implement database search functionality
-    boolean matchFound = searchDatabase(trackingNumber, selectedSize);
-
-    // Display a message dialog based on the search result
-    if (matchFound) {
-        JOptionPane.showMessageDialog(this, "Item Available To Pickup Now!");
-    } else {
-        JOptionPane.showMessageDialog(this, "Item Not Found");
-     }
-    }                                        
+    String selectedSize = (String) jComboBox1.getSelectedItem(); // Get the selected size from the combo box                                      
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 
@@ -294,58 +278,7 @@ public class UserRgisterParcel extends javax.swing.JFrame {
         this.setVisible(false);
      }
     }                                               
-    private boolean searchDatabase(String trackingNumber, String selectedSize) {
-    boolean matchFound = false;
-    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/userdatabase", "root", "")) {
-        String query = "SELECT * FROM userdatabase WHERE TrackingNumber = ? AND SizeOfParcel = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, trackingNumber);
-            preparedStatement.setString(2, selectedSize);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    matchFound = true;
-                }
-            }
-        }
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    return matchFound;
-}
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UserRgisterParcel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UserRgisterParcel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UserRgisterParcel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UserRgisterParcel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UserRgisterParcel().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify                     
     private javax.swing.JButton ParHistorybtnRegPar;
