@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Yusuf
+ 
  */
 public class UserRgisterParcel extends javax.swing.JFrame {
 
