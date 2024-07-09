@@ -4,7 +4,6 @@ import java.util.HashSet;
 
 /**
  *
- * @author Yusuf
  */
 public class UserHomepage extends javax.swing.JFrame {
 
